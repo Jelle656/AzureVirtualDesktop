@@ -102,14 +102,14 @@
             [
                 {   
                     "type": "SharedImage",
-                    "galleryImageId": "/subscriptions/37ee7939-f4b4-4f1c-b994-9637c9ab834e/resourceGroups/wvdImageDemoRg/providers/Microsoft.Compute/galleries/myaibsig01/images/w11wvd",
+                    "galleryImageId": "/subscriptions/37ee7939-f4b4-4f1c-b994-9637c9ab834e/resourceGroups/wvdImageDemoRg/providers/Microsoft.Compute/galleries/myaibsig01/images/win11wvd",
                     "runOutputName": "sigoutput",
                     "artifactTags": {
                         "source": "wvd11",
                         "baseosimg": "windows-11"
                     },
                     "replicationRegions": [
-                      "westeurope>"
+                      "westeurope"
 
                     ]
                 }
