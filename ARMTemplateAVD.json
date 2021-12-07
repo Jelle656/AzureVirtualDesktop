@@ -41,7 +41,7 @@
 
             "vmProfile": 
                     {
-                    "vmSize": "Standard_D2_v2",
+                    "vmSize": "Standard_B2ms",
                     "osDiskSizeGB": 127
                     },
         
@@ -102,14 +102,14 @@
             [
                 {   
                     "type": "SharedImage",
-                    "galleryImageId": "/Macropus - Jelle/37ee7939-f4b4-4f1c-b994-9637c9ab834e/resourceGroups/RG-AIB/providers/Microsoft.Compute/galleries/sigaib01/images/win11wvd",
-                    "runOutputName": "sigOutput",
+                    "galleryImageId": "/subscriptions/37ee7939-f4b4-4f1c-b994-9637c9ab834e/resourceGroups/wvdImageDemoRg/providers/Microsoft.Compute/galleries/myaibsig01/images/w11wvd",
+                    "runOutputName": "sigoutput>",
                     "artifactTags": {
-                        "source": "win11wvd",
+                        "source": "wvd11",
                         "baseosimg": "windows-11"
                     },
                     "replicationRegions": [
-                      "<region1>"
+                      "westeurope>"
 
                     ]
                 }
