@@ -22,7 +22,7 @@ Get-AzResourceProvider -ProviderNamespace Microsoft.KeyVault
 Import-Module Az.Accounts
 
 # Step 2: get existing context
-$currentAzContext = Get-AzContext
+$currentAzContext = Get-AzContext 
 
 # destination image resource group
 $imageResourceGroup="wvdImageDemoRg"
@@ -117,3 +117,19 @@ New-AzResourceGroupDeployment -ResourceGroupName $imageResourceGroup -TemplateFi
 $getStatus=$(Get-AzImageBuilderTemplate -ResourceGroupName $imageResourceGroup -Name $imageTemplateName)
 $getStatus.ProvisioningErrorCode 
 $getStatus.ProvisioningErrorMessage
+
+### Start build
+
+Start-AzImageBuilderTemplate -ResourceGroupName $imageResourceGroup -Name $imageTemplateName -NoWait
+
+#Get Status
+
+$getStatus=$(Get-AzImageBuilderTemplate -ResourceGroupName $imageResourceGroup -Name $imageTemplateName)
+
+# this shows all the properties
+$getStatus | Format-List -Property *
+
+# these show the status the build
+$getStatus.LastRunStatusRunState 
+$getStatus.LastRunStatusMessage
+$getStatus.LastRunStatusRunSubState
